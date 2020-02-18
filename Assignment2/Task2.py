@@ -114,7 +114,7 @@ def variants(document_dict, input_wordList, idf_dict):
 		tf_idf_score[document] = total_score
 	return tf_idf_score
 
-path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/stories/stories'
+path = os.getcwd() + '\\stories\\stories'
 
 document_dict = util.readFromPath(path, not_to_read)
 doc_length_dict = util.storeDocLength(path, not_to_read)
@@ -143,9 +143,9 @@ util.printTopK(tf_idf_score, k)
  	document_dict contains normalized tf
  	idf calculation on the basis of normalized inverse document frequency
 '''
-path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/stories/stories/SRE/index.html'
+path = os.getcwd() + '\\stories\\stories\\SRE\\index.html'
 tf_idf_score = weightedTfIdfScore(path, input_wordList, tf_idf_score, a = 0.5)
-path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/stories/stories/index.html'
+path = os.getcwd() + '\\stories\\stories\\index.html'
 tf_idf_score = weightedTfIdfScore(path, input_wordList, tf_idf_score, a = 0.5)
 
 print("The top K docs with weighted score:")
@@ -169,9 +169,9 @@ util.printTopK(tf_idf_score, k)
  	document_dict contains log normalization tf
  	idf_dict contains inverse document frequency smooth
 '''
-path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/stories/stories/SRE/index.html'
+path = os.getcwd() + '\\stories\\stories\\SRE\\index.html'
 tf_idf_score = weightedTfIdfScore(path, input_wordList, tf_idf_score, a = 0.5)
-path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/stories/stories/index.html'
+path = os.getcwd() + '\\stories\\stories\\index.html'
 tf_idf_score = weightedTfIdfScore(path, input_wordList, tf_idf_score, a = 0.5)
 
 print("The top K docs with weighted score:")
@@ -195,10 +195,9 @@ util.printTopK(tf_idf_score, k)
  	document_dict contains double normalization K tf
  	idf_dict contains inverse document frequency max
 '''
-
-path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/stories/stories/SRE/index.html'
+path = os.getcwd() + '\\stories\\stories\\SRE\\index.html'
 tf_idf_score = weightedTfIdfScore(path, input_wordList, tf_idf_score, a = 0.5)
-path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/stories/stories/index.html'
+path = os.getcwd() + '\\stories\\stories\\index.html'
 tf_idf_score = weightedTfIdfScore(path, input_wordList, tf_idf_score, a = 0.5)
 
 print("The top K docs with weighted score:")
