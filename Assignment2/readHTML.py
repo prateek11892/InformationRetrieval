@@ -13,8 +13,3 @@ def findFileTitleDict(path):
 			if filename.attrs['href'] not in not_filename:
 				file_title_dict[filename.attrs['href']] = (title[2].text).strip()
 	return file_title_dict
-
-#path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/stories/stories/SRE/index.html'
-'''path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/stories/stories/index.html'
-file_title_dict = findFileTitleDict(path)
-print("file_title_dict:",file_title_dict)'''
