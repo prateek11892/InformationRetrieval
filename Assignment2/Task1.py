@@ -37,8 +37,7 @@ def readFromPath(path):
 	print("Corpus collection done")
 	return collection
 
-path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/stories/stories'
-#path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/test'
+path = os.getcwd() + '\\stories\\stories'
 collection = readFromPath(path)
 
 input_string = "command was not helping either"
