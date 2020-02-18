@@ -1,6 +1,6 @@
 # DocumentRanking
 
-To build a unigram inverted index on 20newsgroups dataset[https://archive.ics.uci.edu/ml/datasets/Twenty+Newsgroups]
+For first 3 tasks, Download [http://archives.textfiles.com/stories.zip] dataset
 
 ## Task - 1 : Jaccard Coefficient based document retrieval
 For each query, your system will output top k documents based on jaccard score.
