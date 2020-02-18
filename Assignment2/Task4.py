@@ -37,7 +37,7 @@ def readFromPath(path):
 	for line in lines:
 		wordList.append(line.strip())
 	return wordList
-path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/english2/english2.txt'
+path = os.getcwd() + '\\english2\\english2.txt'
 
 wordList = readFromPath(path)
 print(len(wordList))
