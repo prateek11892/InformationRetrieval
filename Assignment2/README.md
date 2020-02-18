@@ -39,14 +39,14 @@ For each query, your system will output top k documents based on tf-idf-matching
 9.	This process is repeated with different tf-idf variants in Step 4.
 10.	Variant – 2
     -	For each term in a document, log normalize the tf:
-      * Tf = 1 + log(tf)
+        * Tf = 1 + log(tf)
     -	Modify the idf to idf smooth:
-      * Idf = log(Total docs/(1 + df))
+        * Idf = log(Total docs/(1 + df))
 11.	Variant – 3
     -	For each term in a document, double normalize K the tf:
-      * Tf = K + (1-K)(tf/max(tf in doc.))	[K = 0.5]
+        * Tf = K + (1-K)(tf/max(tf in doc.))	[K = 0.5]
     -	Modify the idf to idf max:
-      * Idf = log((max(df))/(1+df))
+        * Idf = log((max(df))/(1+df))
 
 ### PREPROCESSING STEPS:
 1.	Tokenization
