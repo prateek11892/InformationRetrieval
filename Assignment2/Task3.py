@@ -62,7 +62,7 @@ def findCosineSim(document_dict, input_query_tfidf, tf_idf_score, doc_tfidf):
 		cosine_dict[document] = sum / total_denom
 	return cosine_dict
 
-path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/stories/stories'
+path = os.getcwd() + '\\stories\\stories'
 document_dict = util.readFromPath(path, not_to_read)
 doc_length_dict = util.storeDocLength(path, not_to_read)
 
@@ -99,9 +99,9 @@ k = 10
 print("The top k documents without weightage to title:")
 util.printTopK(cosine_dict, k)
 
-path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/stories/stories/SRE/index.html'
+path = os.getcwd() + '\\stories\\stories\\SRE\\index.html'
 tf_idf_score = weightedTfIdfScore(path, input_wordList, tf_idf_score, a = 0.5)
-path = 'C:/Users/PrateekAgarwal/Desktop/Second Semester/Information Retrieval/Assignment 2/stories/stories/index.html'
+path = os.getcwd() + '\\stories\\stories\\index.html'
 tf_idf_score = weightedTfIdfScore(path, input_wordList, tf_idf_score, a = 0.5)
 
 #print("tf_idf_score:",tf_idf_score["sretrade.txt"])
