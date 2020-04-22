@@ -23,6 +23,11 @@ for row_list in result_list:					# write the file in decreasing order of relevan
 
 fw.close()
 
+def factorial(n):
+	if n == 1 or n == 0:
+		return 1
+	else:
+		return n * factorial(n-1)
 # To calculate total number of such files possible
 dict_relscore_count ={}						
 for value in relevance_score_set:				# for each value in the set of relevance scores
@@ -35,6 +40,6 @@ print(dict_relscore_count)
 
 total_files = 1
 for key in dict_relscore_count.keys():
-	total_files = total_files * dict_relscore_count[key]	# calculate the total number of such files possible
+	total_files = total_files * factorial(dict_relscore_count[key])	# calculate the total number of such files possible
 
 print("Total number of such files possible:",total_files)
